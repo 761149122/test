@@ -18,7 +18,9 @@
 			}
 			.compClass{
 				font-size: 25px;
+				color: red;
 			}
+		
 			div{
 				font-size: 55px;
 			}
@@ -33,7 +35,7 @@
 			</div>
 			<hr />
 			<button v-on:click="compuColor=!compuColor">changecolor</button>
-			<div v-bind:class="{compClass}" >
+			<div v-bind:class="{compClass:compuColor}" >
 				11223
 			</div>
 		</div>
@@ -48,11 +50,11 @@
 				},
 				
 				computed:{
-					compClass:function(){
-						return{
-							compuColor: this.compuColor
-						}
-					}
+//					compClass:function(){
+//						return{
+//							compuColor: this.compuColor
+//						}
+//					}
 				}
 			})
 		</script>
