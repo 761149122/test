@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	</head>
+	<body>
+		<div class="app">
+			<p>my name is {{name}}</p>
+			<p>I am {{age}} year old</p>
+			<p>{{greet('morning')}}</p>
+			<a v-bind:href="href">跳转</a>
+			<p v-html="string"></p>
+		</div>
+		<script>
+			new Vue({
+				"el": ".app",
+				"data": {
+					"name" : "newtest",
+					"age" : "1",
+					"href" : "http://baidu.com",
+					"string":"<a href='http://baidu.com'>标签</a>"
+				},
+				methods:{
+					greet:function(time){
+						return "good"+" " +time+ " "+this.name;
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

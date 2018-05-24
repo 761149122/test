@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>enter等修饰符</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	</head>
+	<body>
+		<div class="app">
+			<p>
+				<label for="">name</label>
+				<input type="text" v-on:keyup.enter="logname"/>
+			</p>
+			<p>
+				<label for="">name</label>
+				<input type="text" v-on:keyup.ctrl="logname"/>
+			</p>
+			<p>
+				<label for="">age</label>
+				<input type="text" v-on:keyup.enter="logage"/>
+			</p>
+		</div>
+		<script>
+			new Vue({
+				"el": ".app",
+				"data": {
+					
+				},
+				methods:{
+					logname:function(){
+						console.log("输入名字");
+					},
+					logage:function(){
+						console.log("输入年龄");
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

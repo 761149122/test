@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>style, css</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+		<style>
+			.hascolor{
+				color: red;
+				font-size: 23px;
+			}
+			.hasD{
+				text-decoration: underline;
+				color: blue;
+			}
+			.text-dd{
+				font-size: 55px;
+			}
+			.compClass{
+				font-size: 25px;
+			}
+			div{
+				font-size: 55px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="app">
+			<p v-bind:class="{hascolor:hasit, hasD: hasDD, 'text-dd':hast}">我是否有颜色</p>
+			<hr />
+			<div v-bind:class="{hascolor:hasit,hasD: hasDD,}" v-on:click="hasit =!hasit">
+				ljdldjosjdolsdj
+			</div>
+			<hr />
+			<button v-on:click="compuColor=!compuColor">changecolor</button>
+			<div v-bind:class="{compClass}" >
+				11223
+			</div>
+		</div>
+		<script>
+			new Vue({
+				"el": ".app",
+				"data": {
+					"hasit": false,
+					"hasDD": true,
+					"hast":true,
+					"compuColor":false
+				},
+				
+				computed:{
+					compClass:function(){
+						return{
+							compuColor: this.compuColor
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

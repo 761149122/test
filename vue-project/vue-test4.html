@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>双向数据绑定</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	</head>
+	<body>
+		<div class="app">
+			<p>
+				<label for="">name</label>
+				<input type="text" ref="name" v-on:keyup="logname" value="520"/>
+				<span>{{name}}</span>
+			</p>
+			<p>
+				<label for="">age</label>
+				<input type="text" v-model="age"/>
+				<span>{{age}}</span>
+			</p>
+		</div>
+		<script>
+			new Vue({
+				"el": ".app",
+				"data": {
+					"name":"",
+					"age":""
+				},
+				methods:{
+					logname:function(){
+						this.name = this.$refs.name.value;
+//						console.log(this.$refs.name.value);
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
