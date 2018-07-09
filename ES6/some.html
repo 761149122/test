@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			let data = ['a','b','c','d'];
+//			data.forEach(function(val,index,arr){
+
+			let str  = data.some((val,index,arr)=>{
+				return val=="b";
+			});
+			console.log(str)
+		</script>
+	</body>
+</html>

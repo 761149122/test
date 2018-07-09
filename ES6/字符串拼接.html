@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title></title>
+	</head>
+	<body>
+		<ul id="ul">
+			
+		</ul>
+		<script>
+			let ulDom = document.querySelector("#ul");
+			let data =[
+				{
+					"name":"ee",
+					"age":"11"
+				},
+				{
+					"name":"ff",
+					"age":"12"
+				},
+				{
+					"name":"gg",
+					"age":"13"
+				}
+			]
+	
+			for(let i =0; i<data.length;i++){
+				let oli = document.createElement("li");
+				oli.innerHTML=`<span>我是${data[i].name}</span>
+					<span>我${data[i].age}岁</span>`
+				ulDom.appendChild(oli);
+				
+			}
+			
+		</script>
+	</body>
+</html>

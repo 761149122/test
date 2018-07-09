@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+
+			let show =()=>1;
+			document.write(show());
+			
+			let data =(a,b)=>a+b;
+			document.write(data(12,3));
+			
+			let json = {
+				id:1,
+				show:function(){
+					console.log(this.id);
+				}
+			}
+			json.show();
+			
+			let data2 ={
+				id:2,
+				show:function(){
+					setTimeout(()=>{
+						alert(this.id);//This是指定义函数所在的对象，不是在运行时所在的对象
+					},1500);
+				}
+			}
+			data2.show()
+		</script>
+	</body>
+</html>

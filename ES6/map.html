@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			let data =[
+				{
+					title:"aaaaa",
+					read:11
+				},
+				{
+					title:"bbbbb",
+					read:13
+				},
+				{
+					title:"ccccc",
+					read:15
+				}
+			]
+			
+			let newArry = data.map((item,index,arr)=>{
+				console.log(item,index,arr);
+				let json ={};
+				json.t =item.title;
+				json.r=item.read+22;
+				return json;
+				
+			});
+			console.log(newArry)
+		</script>
+	</body>
+</html>

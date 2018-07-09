@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			let data =[
+				{
+					title:"aaaaa",
+					read:11
+				},
+				{
+					title:"bbbbb",
+					read:13,
+					hot:true
+				},
+				{
+					title:"ccccc",
+					read:15,
+					hot:false
+				}
+			]
+			
+			let newArry = data.filter((item,index,arr)=>{				
+				return item.hot; //item.hot == ture 
+			});
+			console.log(newArry)
+		</script>
+	</body>
+</html>

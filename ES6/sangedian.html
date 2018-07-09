@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>...扩展</title>
+	</head>
+	<body>
+		<script>
+			function show(...a){
+				console.log(a);
+				console.log(a.sort());
+			}
+			show(1,32,3,47,-5,5);
+			
+			function show2(a,b,c){
+				console.log(a,b,c);
+			}
+			show2(...[1,5,55]);
+			
+			//剩余参数
+			function show3(a,b,...c){
+				console.log(a,b);
+				console.log(c);
+			}
+			show3(1,2,3,4,5);
+			
+			var arr = [1,2,3];
+			var arr2 =[...arr];
+			console.log(arr,arr2);
+		</script>
+	</body>
+</html>
