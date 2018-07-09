@@ -1,1 +1,96 @@
+ES6
+let相当于var，先定义后使用，同一个运用域里不能重复定义，
+具备块级运用域
+const是常量，定义好不可以改变，定义完要赋值不可以像
+const a;a=2;
+Object.freeze(对象)冻结
 
+
+解构赋值，左右个数一致，可以在结构里面赋值
+let [a,c=1]  =[2]  
+let ［a,b,c］= [1,2,3]
+
+
+字符串拼接
+let name = ‘Lyy’
+let str = `名字是$｛name｝`
+
+字符串查找
+str.includes(查找的字符串)  返回true，false
+
+以什么字符串开头
+str.startsWith(查找的字符串) 返回true，false
+
+以什么字符串结尾
+str.endsWidth(查找的字符串)返回true，false
+
+重复字符串
+str.repeat(重复字数)
+
+
+字符串填充
+往前填充str.padStart(整个填充的长度，填充的字符串)
+往后填充str.padEnd()
+
+扩展运算符
+…
+可以展开数组
+function show(...a){
+console.log(a);
+console.log(a.sort());
+}
+show(1,32,3,47,-5,5);
+
+function show2(a,b,c){
+console.log(a,b,c);
+}
+show2(...[1,5,55]);
+
+剩余参数：必须放在最后
+function show3(a,b,...c){
+console.log(a,b);
+console.log(c);
+}
+show3(1,2,3,4,5);
+
+
+箭头函数
+()=>return的语句
+()=>{
+语句
+return
+}
+注意
+This是指定义函数所在的对象，不是在运行时所在的对象
+箭头函数没有arguments，用...
+箭头函数不可以当构造函数（new）
+
+
+循环
+arr.forEach(function(val,index.arr){})//代替for循环
+let data = ['a','b','c','d'];
+data.forEach(function(val,index,arr){
+console.log(val,index,arr);
+});
+
+映射
+arr.map(function(val,index.arr){})
+正常情况下，需要配一个return，返回一个新数组，如果没有return，就相当于foreach。
+注意，平时用到map一定要有return
+
+过滤
+arr.filter(function(val,index.arr){})
+ruturn true的时候就过滤留下来
+ 
+arr.some(function(val,index.arr){})
+返回true false，类似查找，数组里面某个元素符合条件，返回true
+
+
+arr.every(function(val,index.arr){}) 
+数组里面所有元素符合条件，返回true
+
+
+第二个参数是this指向谁
+
+
+reduce reduceRight
